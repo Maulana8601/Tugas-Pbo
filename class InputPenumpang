@@ -1,0 +1,27 @@
+package com.mycompany.tugas_tugas;
+
+import java.util.Scanner;
+
+
+public class InputPenumpang {
+    Scanner input = new Scanner(System.in);
+
+    public Penumpang inputData() {
+        System.out.print("Masukkan Nama      : ");
+        String nama = input.nextLine();
+
+        System.out.print("Masukkan No Tiket  : ");
+        String noTiket = input.nextLine();
+
+        System.out.print("Pilih Jenis (1.Reguler | 2.VIP) : ");
+        int pilih = input.nextInt();
+        input.nextLine();
+
+        if (pilih == 1) {
+            return new PenumpangReguler(nama, noTiket);
+        } else {
+            return new PenumpangVIP(nama, noTiket);
+        }
+    }
+}
+
