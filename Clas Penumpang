@@ -1,0 +1,25 @@
+package com.mycompany.tugas_tugas;
+
+
+public abstract class Penumpang {
+    protected String nama;
+    protected String noTiket;
+    
+    public Penumpang(String nama, String noTiket){
+        this.nama = nama;
+        this.noTiket = noTiket;
+    }
+    
+    public abstract double hitungHargaTiket();
+    
+    public void tampilkanData(){
+        System.out.println("Nama : " + nama);
+        System.out.println("NO Tiket : " + noTiket);
+        System.out.println("Harga Tiket : " + hitungHargaTiket());
+    }
+    
+    public void tampilkanData(String jenis){
+        tampilkanData();
+        System.out.println("Jenis : " + jenis);
+    }
+}
